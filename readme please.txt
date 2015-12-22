@@ -1,0 +1,1 @@
+1 - To change the source and terminal open index.html and change values here:  fordFulkerson(graph, 0, 5); 0->source, 5->destination

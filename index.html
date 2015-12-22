@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ford Fulkerson Demo</title>
+
+<script src="Queue.src.js"> </script>  
+<script src="fordfulkerson.js"> </script>  
+</head>
+<body bgcolor="gray">
+
+//Ahmad Shahwaiz<br/>
+//L135062<br/>
+//Ford Fulkerson Method
+
+<!--Display  Orignal Matrix-->
+<div id="Demo" style="border-bottom:2px solid #000;" align="center">
+<h3>Orignal Matrix <h3/>
+</div>
+
+<!--Display  Path-->
+<div id="Path" style="border-bottom:2px solid #000;">
+<h3 align="center" >Residual Graph, Path & Flow<h3/>
+</div>
+		<script type="text/javascript">
+		// You can change the graph from here
+		var graph =  	[	
+							[0, 16, 13, 0, 0, 0],
+							[0, 0, 0, 12, 0, 0],
+							[0, 4, 0, 0, 14, 0],
+							[0, 0, 9, 0, 0, 20],
+							[0, 0, 0, 7, 0, 4],
+							[0, 0, 0, 0, 0, 0]
+						]; 
+		var table = '<table cellspacing=10 cellpadding=4>';
+		for (var u = 0; u < graph.length; u++){
+			table +='<tr>';
+			for (var v = 0; v < graph.length; v++){
+					table +='<td>'+graph[u][v]+'</td>';
+			}
+			table +='</tr>';
+		}
+		document.getElementById("Demo").innerHTML+=table+'<br>'; 
+
+		//Please input Source and Terminal/Destination in the method fordFulkerson(graph, s, t);
+
+		document.getElementById("Demo").innerHTML += "<br>The maximum possible flow is <b>" + fordFulkerson(graph, 0, 5)+'</b>';
+		 
+		</script>
+
+
+</body>
+</html>
