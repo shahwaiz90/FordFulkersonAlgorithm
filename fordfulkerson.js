@@ -47,13 +47,10 @@ function fordFulkerson(graph, start, destination){
 		
 
 		for (v = destination; v != start; v = trackParent[v]){
-			u = trackParent[v];
-			if(graph[u][v] > 0){
+			u = trackParent[v]; 
 				residualGraph[u][v] -= path_flow;
 				residualGraph[v][u] += path_flow;
-			}else{
-				residualGraph[u][v] -= path_flow; 
-			} 
+		  
 		}
  
 		max_flow += path_flow;
