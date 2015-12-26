@@ -8,6 +8,7 @@ function fordFulkerson(graph, start, destination){
 	var u, v; 
 	var residualGraph = new Array(TotalVertix);
 	 TotalVertix = graph.length;
+	 
 	//Copying Graph into Residual Graph
 	for (u = 0; u < TotalVertix; u++){
 		residualGraph[u] = new Array(TotalVertix);
